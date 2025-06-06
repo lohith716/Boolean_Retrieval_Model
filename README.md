@@ -1,41 +1,51 @@
-# Boolean-Retrieval-Model
-This project implements a Boolean retrieval model in Python that reads a
-collection of documents and builds an inverted and positional index,
-which is used to answer Boolean queries expressed as combinations of
-terms and Boolean operators and Proximity queries expressed as terms
-and k (Skip words value).
+Boolean-Retrieval-Model
+This project implements a Boolean retrieval model in Python that reads a collection of documents based on the Indian economy and builds both an inverted index and a positional index. These indexes are used to answer:
 
-## Methodology
-1. Data Preprocessing for stop words removal, lower case, stemming
-and removing Unicode.
-2. Built Inverted Index and applied precedence to deal with Boolean
-queries and tokenization of queries.
-3. Built Positional Index and extracted positional lists for Proximity
-queries.
-4. Skipped k words mentioned by the query by subtracting
-positions and extracting the required k-positioned documents
-## Limitations:
-• It can run Boolean queries with unlimited "and or not"
+Boolean queries using combinations of terms and Boolean operators (AND, OR, NOT)
 
-• It can run with both upper and lower case "and or not"
+Proximity queries using terms and a skip-word value k (e.g., policy reform /5)
 
-• It can run complex queries with brackets. For eg:
-( psl or t20 ) and ( cricket or rohit or india ) and ( not ( impossible
-or pakistan ) )
-## Usage
-• Boolean Queries: spin AND feast
+Methodology
+Data Preprocessing: Stop word removal, lowercasing, stemming, and Unicode cleanup
 
-• Phrasal Queries: t20 world
+Inverted Index: Built to support Boolean queries with proper operator precedence
 
-• Proximity Queries: replacement players /9
+Positional Index: Built to enable proximity search using term positions
 
-## Requirements
+Proximity Handling: Identifies documents where query terms appear within k words
+
+Both inverted_index.txt and positional_index.txt files are generated during execution.
+
+Dataset
+The dataset consists of 30 text documents focused on the Indian economy, covering topics like GDP, inflation, employment, trade, budget policies, and more. The documents use overlapping vocabulary to support effective Boolean retrieval.
+
+Limitations
+Supports Boolean queries with unlimited use of AND, OR, and NOT
+
+Works with both uppercase and lowercase operators
+
+Supports complex nested queries using brackets
+
+Usage
+Boolean Query: growth AND inflation
+
+Phrasal Query: foreign investment
+
+Proximity Query: digital economy /7
+
+Requirements
 Python 3.6 or later
 
 pip (Python package installer)
-## Installation
-• Download and extract Project
 
-• Install all the required Python packages
+Installation
+Download and extract the project files
 
-• Run ir_k201895_assignment_01.py file
+Install any required Python packages
+
+Run the script:
+
+bash
+Copy
+Edit
+python project.py
