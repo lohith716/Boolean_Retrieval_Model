@@ -84,5 +84,3 @@ welfar: [27]
 women: [22]
 
 Total number of tokens: 83
-
-
