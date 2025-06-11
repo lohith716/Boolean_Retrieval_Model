@@ -13,7 +13,6 @@ with open('Stopword-List.txt', 'r') as f:
 
 print(sorted(stop))
 
-
 def stopwords_removal(x):
     line_without_stop = [word for word in x.split() if not word in stop]
     return line_without_stop
