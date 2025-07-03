@@ -1,4 +1,4 @@
-# Boolean-Retrieval-Model  
+# Boolean-Retrieval-Model
 This project implements a Boolean retrieval model in Python that reads a  
 collection of documents based on the Indian economy and builds an inverted and positional index,  
 which is used to answer Boolean queries expressed as combinations of  
